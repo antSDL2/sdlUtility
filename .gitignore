@@ -1,0 +1,6 @@
+*.layout
+*.depend
+*.o
+*.res
+bin/
+lib/
