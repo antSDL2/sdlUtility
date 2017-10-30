@@ -2,8 +2,6 @@
 #ifndef NEO_TOOLBOX_H
 #define NEO_TOOLBOX_H
 
-#include "List.h"
-
 #include <Lua/lua.hpp>
 #include <string>
 #include <vector>

@@ -43,8 +43,6 @@
 		</Linker>
 		<Unit filename="AtTools.cpp" />
 		<Unit filename="AtTools.h" />
-		<Unit filename="List.cpp" />
-		<Unit filename="List.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
