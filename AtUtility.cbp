@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="AtUtility" />
+		<Option execution_dir="C:/Users/AristotelisTrapalis/Documents/Projects/Titania/AtTools/" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/AtUtility-d" imp_lib="lib/lib$(TARGET_OUTPUT_BASENAME)" def_file="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME)" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/AtUtility" imp_lib="lib/lib$(TARGET_OUTPUT_BASENAME)" def_file="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME)" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="../external/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-llua52" />
+			<Add option="-lopengl32" />
+			<Add option="-lglu32" />
+			<Add option="-lSDL2_ttf" />
+			<Add option="-lSDL2_image" />
+			<Add option="-lSDL2" />
+			<Add directory="../external/bin" />
+		</Linker>
+		<Unit filename="AtUtility.cpp" />
+		<Unit filename="AtUtility.h" />
+		<Unit filename="Collision.cpp" />
+		<Unit filename="Collision.h" />
+		<Unit filename="Files.cpp" />
+		<Unit filename="Files.h" />
+		<Unit filename="Lua.cpp" />
+		<Unit filename="Lua.h" />
+		<Unit filename="Renderer.cpp" />
+		<Unit filename="Renderer.h" />
+		<Unit filename="Strings.cpp" />
+		<Unit filename="Strings.h" />
+		<Unit filename="Vector2.cpp" />
+		<Unit filename="Vector2.h" />
+		<Unit filename="Vectors.cpp" />
+		<Unit filename="Vectors.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
