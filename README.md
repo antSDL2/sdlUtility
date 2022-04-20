@@ -1,5 +1,7 @@
 # AtUtility
-Set of basic utility functions written for a video game engine in C++. Includes methods to handle:
+Set of utility functions written for a 2D video game engine in C++.
+
+Includes methods to handle:
 - Directory browsing.
 - Basic string manipulation.
 - Collision detection of 2D shapes.
