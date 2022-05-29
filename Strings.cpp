@@ -3,7 +3,11 @@
 
 namespace AtUtility {
     namespace Strings {
-        int FindNthOf(int &Occurence, char Character, const std::string &String) {
+        /// Returns the position of the nth occurrence of a character within the specified string.
+        /** @param Occurrence Parameter to specify which occurrence to find.
+            @param Character The character to find.
+            @param String The specified string. */
+        int FindNthOf(int &Occurrence, char Character, const std::string &String) {
             int TargetPosition = -1;
 
             if (FindTotalOf(Character, String) >= Occurence) {
@@ -31,6 +35,9 @@ namespace AtUtility {
             return TargetPosition;
         }
 
+        /// Returns the total occurrences of a character within the specified string.
+        /** @param Character The character to find.
+            @param String The specified string. */
         int FindTotalOf(char Character, const std::string &String) {
             int Counter = 0;
             int LastOccurence = -1;
@@ -47,7 +54,11 @@ namespace AtUtility {
             return Counter;
         }
 
-        std::string Seperate(const std::string &String, char Seperator, int SubstringNumber) {
+        /// Returns a substring from a character-delimited string, as specified by the parameters.
+        /** @param String The character-delimited string.
+            @param Separator Optional delimiter character.
+            @param SubstringNumber Optional index of the requested substring within the character-delimited string. */
+        std::string Separate(const std::string &String, char Separator, int SubstringNumber) {
             std::string Substring = "";
             if (Seperator) {
                 int InitialPosition = 0;

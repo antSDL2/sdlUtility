@@ -8,10 +8,21 @@
 
 namespace AtUtility {
     namespace Collision {
+        /// Used to calculate a drag force for moving objects.
+        /** @param Velocity The velocity of the moving object.
+            @param DragCoefficient A drag coefficient.
+            @param Area The area of the object subjected to the drag force. */
         float CalculateDrag(float Velocity, float DragCoefficient, float Area) {
             return 0.5f*powf(Velocity, 2)*DragCoefficient*Area;
         }
 
+        /// Used to check for collision between two disks.
+        /** @param X1, Y1, X2, Y2 Coordinates of each disk.
+            @param R1, R2 External radius of each disk.
+            @param r1, r2 Internal radius of each disk.
+            @param Angle1, Angle2 Section (in radians) of each disk to be considered in the collision check.
+            @param Direction1, Direction2 Direction (in radians) to which each disk is pointing. Relevant if using a section of a disk.
+            @param AdjustX, AdjustY Measured overlap between the two disks. Values returned by reference. */
         bool DiskInDisk(float X1, float Y1, float R1, float r1, float Angle1, float Direction1, float X2, float Y2, float R2, float r2, float Angle2, float Direction2, float &AdjustX, float &AdjustY) {
             bool DiskInDisk = false;
 
@@ -108,6 +119,13 @@ namespace AtUtility {
             return DiskInDisk;
         }
 
+        /// Used to check for collision between a disk and a rectangle.
+        /** @param X1, Y1, X2, Y2 Coordinates of each shape.
+            @param R1 External radius of the disk.
+            @param r1 Internal radius of the disk.
+            @param Angle1 Section (in radians) of the disk to be considered in the collision check.
+            @param Direction1, Direction2 Direction (in radians) to which each shape is pointing.
+            @param AdjustX, AdjustY Measured overlap between the two shapes. Values returned by reference. */
         bool DiskInRectangle(float X1, float Y1, float R1, float r1, float Angle1, float Direction1, float X2, float Y2, int Width2, int Height2, float Direction2, float &AdjustX, float &AdjustY) {
             bool DiskInRectangle = false;
 
@@ -218,6 +236,10 @@ namespace AtUtility {
             return DiskInRectangle;
         }
 
+        /// Used to keep a float value within a specified range.
+        /** @param Minimum Minimum value of the range.
+            @param Value Specified value.
+            @param Maximum Maximum value of the range. */
         float Clamp(float Minimum, float Value, float Maximum) {
             if (Value > Maximum) {
                 Value = Maximum;
@@ -228,6 +250,12 @@ namespace AtUtility {
             return Value;
         }
 
+        /// Used to check for collision between a point and a disk.
+        /** @param X1, Y1, X, Y Coordinates of each shape.
+            @param R External radius of the disk.
+            @param r Internal radius of the disk.
+            @param Angle Section (in radians) of the disk to be considered in the collision check.
+            @param Direction Direction (in radians) to which the disk is pointing. */
         bool PointInDisk(float X1, float Y1, float X, float Y, float R, float r, float Angle, float Direction) {
             bool PointInDisk = false;
 
@@ -270,6 +298,10 @@ namespace AtUtility {
             return PointInDisk;
         }
 
+        /// Used to check for collision between a point and a rectangle.
+        /** @param X1, Y1, X, Y Coordinates of each shape.
+            @param Width, Height Dimensions of the rectangle.
+            @param Direction Direction (in radians) to which the rectangle is pointing. */
         bool PointInRectangle(float X1, float Y1, float X, float Y, int Width, int Height, float Direction) {
             bool PointInRectangle = false;
 
@@ -282,6 +314,10 @@ namespace AtUtility {
             return PointInRectangle;
         }
 
+        /// Used to check for collision between a point and an isosceles triangle.
+        /** @param X1, Y1, X, Y Coordinates of each shape.
+            @param Width, Height Dimensions of the triangle.
+            @param Direction Direction (in radians) to which the triangle is pointing. */
         bool PointInTriangle(float X1, float Y1, float X, float Y, int Width, int Height, float Direction) {
             bool PointInTriangle = false;
 
@@ -294,6 +330,11 @@ namespace AtUtility {
             return PointInTriangle;
         }
 
+        /// Used to check for collision between a point and a rectangle.
+        /** @param X1, Y1, X2, Y2 Coordinates of each rectangle.
+            @param Width1, Height1, Width2, Height2, Dimensions of each rectangle.
+            @param Direction1, Direction2 Direction (in radians) to which each rectangle is pointing.
+            @param AdjustX, AdjustY Measured overlap between the two rectangles. Values returned by reference. */
         bool RectangleInRectangle(float X1, float Y1, int Width1, int Height1, float Direction1, float X2, float Y2, int Width2, int Height2, float Direction2, float &AdjustX, float &AdjustY) {
             bool RectangleInRectangle = false;
 
@@ -424,6 +465,10 @@ namespace AtUtility {
             return RectangleInRectangle;
         }
 
+        /// Used to rotate a point around a center point by the specified angle.
+        /** @param X1, Y1 Coordinates of the point.
+            @param CenterX, CenterY Coordinates of the center point.
+            @param Angle Direction (in radians) to which the point will be rotated. */
         void RotatePointBy(float &X1, float &Y1, float CenterX, float CenterY, float Angle) {
             float CurrentAngle = atan2(Y1-CenterY, X1-CenterX);
             float Radius = sqrt(pow(CenterX-X1, 2) +pow(CenterY-Y1, 2));

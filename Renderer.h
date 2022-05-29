@@ -8,6 +8,7 @@
 #include <gl/gl.h>
 
 namespace AtUtility {
+    /// Functions used to setup OpenGL and render 2D shapes.
     namespace Renderer {
         void Clear();
         SDL_Cursor *CreateCursorFromData(Uint8 *Pixels, int Width, int Height);

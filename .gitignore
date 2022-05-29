@@ -4,3 +4,5 @@
 *.res
 bin/
 lib/
+docs/xml
+docs/Moxyfile.bat

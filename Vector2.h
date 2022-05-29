@@ -3,10 +3,12 @@
 #define NEO_TOOLBOX_VECTOR2_H
 
 namespace AtUtility {
+	/// Used to describe a 2D vector as a set of (x, y) components.
     class Vector2 {
         //Members
         protected:
-            float x, y;
+            float x;                                    //!< X component of the vector.
+            float y;                                    //!< Y component of the vector.
         //Access Methods
         public:
             Vector2(float X = 0, float Y = 0);

@@ -4,6 +4,9 @@
 
 namespace AtUtility {
     namespace Lua {
+        /// Used to execute a Lua script.
+        /** @param Lua The Lua context.
+            @param Script The Lua script as a string. */
         int ExecuteScript(lua_State *Lua, std::string Script) {
             int ExecuteScript = 0;
 
@@ -25,6 +28,9 @@ namespace AtUtility {
             return ExecuteScript;
         }
 
+        /// Used to execute a Lua script from the specified file.
+        /** @param Lua The Lua context.
+            @param Location The location of the Lua script to be executed. */
         int ExecuteFile(lua_State *Lua, std::string Location) {
             int ExecuteFile = 0;
 
@@ -35,7 +41,6 @@ namespace AtUtility {
                     std::cerr << lua_tostring(Lua, -1) << std::endl;
                     lua_pop(Lua, 1);
                 }
-
             }
 
             return ExecuteFile;

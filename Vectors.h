@@ -5,7 +5,9 @@
 #include <vector>
 
 namespace AtUtility {
+    /// Functions used to operate on std::vector structures.
     namespace Vectors {
+        /// Finds the maximum value within the specified vector and returns its index.
         template <class Type>
         int FindMaximum(std::vector<Type> Vector) {
             unsigned int Size = Vector.size();
@@ -21,6 +23,7 @@ namespace AtUtility {
             } else return 0;
         }
 
+        /// Finds the minimum value within the specified vector and returns its index.
         template <class Type>
         int FindMinimum(std::vector<Type> Vector) {
             unsigned int Size = Vector.size();

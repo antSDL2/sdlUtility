@@ -5,6 +5,9 @@
 
 namespace AtUtility {
     namespace Files {
+        /// Used to return a list of available directories and files at the specified path.
+        /** @param Path Path to browse to.
+            @param FileType Optional file type to limit the results to within the directory. */
         std::vector<std::string> GetDirectoryList(std::string Path, std::string FileType) {
             std::vector<std::string> DirectoryList;
 

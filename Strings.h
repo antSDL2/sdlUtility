@@ -6,13 +6,18 @@
 #include <sstream>
 
 namespace AtUtility {
+    /// Functions used to manipulate strings.
     namespace Strings {
-        int FindNthOf(int &Occurence, char Character, const std::string &String);
+        int FindNthOf(int &Occurrence, char Character, const std::string &String);
         int FindTotalOf(char Character, const std::string &String);
-        std::string Seperate(const std::string &String, char Seperator ='\0', int SubstringNumber = 0);
+        std::string Separate(const std::string &String, char Separator ='\0', int SubstringNumber = 0);
 
+        /// Converts a string to the specified type.
+        /** @param String The string to be converted.
+            @param Separator Optional delimiter character.
+            @param SubstringNumber Optional index of the requested value within a character-delimited string. */
         template <class Type>
-        Type StringTo(const std::string &String, char Seperator = '\0', int SubstringNumber = 0) {
+        Type StringTo(const std::string &String, char Separator = '\0', int SubstringNumber = 0) {
             Type Return;
             std::string Substring;
 
