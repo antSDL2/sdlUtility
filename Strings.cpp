@@ -10,7 +10,7 @@ namespace AtUtility {
         int FindNthOf(int &Occurrence, char Character, const std::string &String) {
             int TargetPosition = -1;
 
-            if (FindTotalOf(Character, String) >= Occurence) {
+            if (FindTotalOf(Character, String) >= Occurrence) {
                 int LastOccurence = -1;
                 int Counter = 0;
 
@@ -20,14 +20,14 @@ namespace AtUtility {
                     if (Position >= 0) {
                         LastOccurence = Position;
                         Counter++;
-                        if (Counter-1 == Occurence) {
-                            Occurence = Position;
+                        if (Counter-1 == Occurrence) {
+                            Occurrence = Position;
                             More = false;
                         }
                     } else More = false;
 
-                    if (Counter == Occurence) {
-                        if (Position < 0) Occurence = -1; else TargetPosition = Position;
+                    if (Counter == Occurrence) {
+                        if (Position < 0) Occurrence = -1; else TargetPosition = Position;
                     }
                 }
             }
@@ -60,15 +60,15 @@ namespace AtUtility {
             @param SubstringNumber Optional index of the requested substring within the character-delimited string. */
         std::string Separate(const std::string &String, char Separator, int SubstringNumber) {
             std::string Substring = "";
-            if (Seperator) {
+            if (Separator) {
                 int InitialPosition = 0;
                 int FinalPosition = 0;
                 if (SubstringNumber) {
-                    InitialPosition = FindNthOf(SubstringNumber, Seperator, String)+1;
+                    InitialPosition = FindNthOf(SubstringNumber, Separator, String)+1;
                     if (InitialPosition != 0) FinalPosition = SubstringNumber;
                 } else {
                     InitialPosition = 0;
-                    FinalPosition = String.find_first_of(Seperator);
+                    FinalPosition = String.find_first_of(Separator);
                 }
                 //std::cout <<  "(" << InitialPosition << ", " << FinalPosition << ")" << std::endl;
                 Substring = String.substr(InitialPosition, FinalPosition-InitialPosition);

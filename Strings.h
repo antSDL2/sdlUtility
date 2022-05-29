@@ -21,7 +21,7 @@ namespace AtUtility {
             Type Return;
             std::string Substring;
 
-            Substring = Seperate(String, Seperator, SubstringNumber);
+            Substring = Separate(String, Separator, SubstringNumber);
 
             std::istringstream Stream(Substring);
             Stream >> Return;
