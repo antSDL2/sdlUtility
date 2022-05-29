@@ -1,5 +1,5 @@
 # AtUtility
-Set of low-level utility functions written for a custom 2D video game engine in C++.
+Utility toolkit for a 2D game engine written in C++.
 
 Includes methods to handle:
 - Directory browsing.
