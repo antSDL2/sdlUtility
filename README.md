@@ -18,4 +18,4 @@ To compile the source code, it is recommended to use the Code::Blocks project in
 - SDL2 base and modules (SDL2, SDL2_image, SDL2_ttf)
 
 ## Documentation
-Documentation can be found in the [GitHub pages](https://atrapalis.github.io/AtUtility/) for this project.
+Documentation can be found in the [GitHub pages](https://ant-sdl2.github.io/AtUtility/) for this project.
