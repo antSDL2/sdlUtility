@@ -2,7 +2,7 @@
 #include "Vector2.h"
 #include <math.h>
 
-namespace AtUtility {
+namespace sdlUtility {
     /// operator= implementation.
     /** Assigns the x, y values to the specified Vector2. */
     void Vector2::operator=(Vector2 Vector) {

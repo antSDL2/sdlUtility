@@ -5,7 +5,7 @@
 #include <string>
 #include <Lua/lua.hpp>
 
-namespace AtUtility {
+namespace sdlUtility {
     /// Functions used to execute Lua scripts.
     namespace Lua {
         int ExecuteScript(lua_State *Lua, std::string Script);

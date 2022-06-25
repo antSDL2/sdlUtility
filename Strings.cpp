@@ -1,7 +1,7 @@
 //Strings.cpp
 #include "Strings.h"
 
-namespace AtUtility {
+namespace sdlUtility {
     namespace Strings {
         /// Returns the position of the nth occurrence of a character within the specified string.
         /** @param Occurrence Parameter to specify which occurrence to find.

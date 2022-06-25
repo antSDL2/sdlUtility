@@ -5,7 +5,7 @@
 #include <string>
 #include <sstream>
 
-namespace AtUtility {
+namespace sdlUtility {
     /// Functions used to manipulate strings.
     namespace Strings {
         int FindNthOf(int &Occurrence, char Character, const std::string &String);

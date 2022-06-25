@@ -2,7 +2,7 @@
 #ifndef NEO_TOOLBOX_VECTOR2_H
 #define NEO_TOOLBOX_VECTOR2_H
 
-namespace AtUtility {
+namespace sdlUtility {
 	/// Used to describe a 2D vector as a set of (x, y) components.
     class Vector2 {
         //Members

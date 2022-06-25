@@ -2,7 +2,7 @@
 #include "Lua.h"
 #include <iostream>
 
-namespace AtUtility {
+namespace sdlUtility {
     namespace Lua {
         /// Used to execute a Lua script.
         /** @param Lua The Lua context.

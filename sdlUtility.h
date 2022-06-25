@@ -1,4 +1,4 @@
-//AtUtility.h
+//sdlUtility.h
 #ifndef NEO_TOOLBOX_H
 #define NEO_TOOLBOX_H
 

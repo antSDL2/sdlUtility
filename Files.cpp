@@ -3,7 +3,7 @@
 #include <iostream>
 #include <dirent.h>
 
-namespace AtUtility {
+namespace sdlUtility {
     namespace Files {
         /// Used to return a list of available directories and files at the specified path.
         /** @param Path Path to browse to.

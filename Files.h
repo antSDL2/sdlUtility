@@ -5,7 +5,7 @@
 #include <vector>
 #include <string>
 
-namespace AtUtility {
+namespace sdlUtility {
     /// Functions used to browse directories/files.
     namespace Files {
         std::vector<std::string> GetDirectoryList(std::string Path, std::string FileType = "");

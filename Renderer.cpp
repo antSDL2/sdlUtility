@@ -8,7 +8,7 @@
 #include <gl/glu.h>
 #include <string.h>
 
-namespace AtUtility {
+namespace sdlUtility {
     namespace Renderer {
         /// Clears the renderer.
         void Clear() {

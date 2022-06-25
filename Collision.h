@@ -3,7 +3,7 @@
 #define NEO_TOOLBOX_PHYSICS_H
 
 /// Contains all class and function implementations of the project.
-namespace AtUtility {
+namespace sdlUtility {
     /// Functions used to detect collisions between 2D shapes.
     namespace Collision {
         float CalculateDrag(float Velocity, float DragCoefficient, float Area);

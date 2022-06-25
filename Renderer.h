@@ -7,7 +7,7 @@
 #include <string>
 #include <gl/gl.h>
 
-namespace AtUtility {
+namespace sdlUtility {
     /// Functions used to setup OpenGL and render 2D shapes.
     namespace Renderer {
         void Clear();

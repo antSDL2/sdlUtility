@@ -6,7 +6,7 @@
 #include <iostream>
 #include <math.h>
 
-namespace AtUtility {
+namespace sdlUtility {
     namespace Collision {
         /// Used to calculate a drag force for moving objects.
         /** @param Velocity The velocity of the moving object.

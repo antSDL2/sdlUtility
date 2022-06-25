@@ -4,7 +4,7 @@
 
 #include <vector>
 
-namespace AtUtility {
+namespace sdlUtility {
     /// Functions used to operate on std::vector structures.
     namespace Vectors {
         /// Finds the maximum value within the specified vector and returns its index.
